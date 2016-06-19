@@ -125,7 +125,7 @@ controller.hears('!nextrace', ['direct_message', 'direct_mention', 'mention', 'a
           short: true
         },{
           title: 'Date/Time',
-          value: raceDate.toNow(),
+          value: raceDate.fromNow(),
           short: true
         }],
         text: '',
@@ -192,7 +192,7 @@ controller.hears(['!lastrace', '!race (.*) (.*)'], ['direct_message', 'direct_me
           short: true
         },{
           title: 'Date/Time',
-          value: raceDate.toNow(),
+          value: raceDate.fromNow(),
           short: true
         },
           results
