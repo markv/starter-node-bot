@@ -7,7 +7,7 @@ var token = process.env.SLACK_TOKEN
 var controller = Botkit.slackbot({
   // reconnect to Slack RTM when connection goes bad
   retry: Infinity,
-  debug: 7
+  debug: false
 })
 
 // Assume single team mode if we have a SLACK_TOKEN
