@@ -158,11 +158,11 @@ controller.hears(['!lastrace', '!race (.*) (.*)'], ['direct_message', 'direct_me
 
     var raceDate = Moment(race.date + ' ' + race.time);
     var results = {
-      title: 'Results (Top 10)',
+      title: 'Results',
       value: '',
     };
 
-    for (var i = 0; i < Math.min(race.Results.length, 10); i++) {
+    for (var i = 0; i < race.Results.length; i++) {
       var result = race.Results[i];
       results.value += result.positionText + ' - ';
       results.value += result.Driver.givenName + ' ';
