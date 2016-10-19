@@ -12,7 +12,7 @@ var controller = Botkit.slackbot({
 
 controller.on('rtm_close', function() {
   process.exit();
-});
+})
 
 // Assume single team mode if we have a SLACK_TOKEN
 if (token) {
@@ -103,8 +103,7 @@ function nextRace(bot, message) {
 
     return bot.reply(message, reply);
   })
-
-})
+}
 
 controller.hears(['!lastrace', '!race (.*) (.*)'], ['direct_message', 'direct_mention', 'mention', 'ambient'], function(bot, message){
   var year = message.match[1];
