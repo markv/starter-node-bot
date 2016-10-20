@@ -13,7 +13,7 @@ module.exports.nextRace = (msg) => {
     var reply = {
       text: `${msg.body.command} ${msg.body.text}`,
       as_user: true,
-      token: msg.meta.app_token,
+      response_type: 'in_channel',
       attachments: [{
         fields: [{
           title: 'Race',
@@ -39,7 +39,7 @@ module.exports.nextRace = (msg) => {
       }],
     }
 
-    return msg.say(reply)
+    return msg.respond(reply)
   })
 }
 
@@ -85,7 +85,7 @@ module.exports.getRace = (options, msg) => {
     var reply = {
       text: `${msg.body.command} ${msg.body.text}`,
       as_user: true,
-      token: msg.meta.app_token,
+      response_type: 'in_channel',
       attachments: [{
         fields: [{
           title: 'Race',
@@ -113,6 +113,6 @@ module.exports.getRace = (options, msg) => {
       }],
     }
 
-    return msg.say(reply)
+    return msg.respond(reply)
   })
 }

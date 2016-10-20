@@ -16,12 +16,12 @@ module.exports.getWeather = (location, msg) => {
     var reply = {
       text: `${msg.body.command} ${msg.body.text}`,
       as_user: true,
-      token: msg.meta.app_token,
+      response_type: 'in_channel',
       attachments: [{
         text: text,
         mrkdwn_in: ['text']
       }]
     }
-    return msg.say(reply)
+    return msg.respond(reply)
   })
 }
