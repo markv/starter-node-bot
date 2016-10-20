@@ -11,7 +11,6 @@ module.exports.nextRace = (msg) => {
 
     var raceDate = Moment(race.date + ' ' + race.time)
     var reply = {
-      text: `${msg.body.command} ${msg.body.text}`,
       as_user: true,
       response_type: 'in_channel',
       attachments: [{
@@ -83,7 +82,6 @@ module.exports.getRace = (options, msg) => {
     }
 
     var reply = {
-      text: `${msg.body.command} ${msg.body.text}`,
       as_user: true,
       response_type: 'in_channel',
       attachments: [{
